@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EmaarInterviewTask</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name_text_value">Ahmed</string>
+    <string name="last_name_text_value">Elnoor</string>
+    <string name="email_text_value">ahmed@gmail.com</string>
+    <string name="country_text_value">Country |</string>
+    <string name="county_text_value_">Sudan</string>
+    <string name="date_text_value">2 days ago</string>
 </resources>
