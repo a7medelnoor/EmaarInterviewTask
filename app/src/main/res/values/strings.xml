@@ -7,4 +7,5 @@
     <string name="country_text_value">Country |</string>
     <string name="county_text_value_">Sudan</string>
     <string name="date_text_value">2 days ago</string>
+    <string name="toolbar_title_home_fragment">User List</string>
 </resources>
