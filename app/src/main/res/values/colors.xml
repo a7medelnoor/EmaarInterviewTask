@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text_color">#000000</color>
     <color name="gray_dark_color">#323030</color>
+    <color name="toolbar_bg_color">#E6E6E6</color>
 </resources>
