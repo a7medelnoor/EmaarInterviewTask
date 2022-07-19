@@ -13,7 +13,7 @@ Technologie used:
 
 - Fragment Home
 
-![alt text](https://github.com/a7medelnoor/EmaarInterviewTask/blob/dev/fragment_details.jpg)
+![alt text](https://github.com/a7medelnoor/EmaarInterviewTask/blob/dev/fragment_home.jpg)
 
 
 
@@ -22,4 +22,4 @@ Technologie used:
 
 - Fragment Details
 
-![alt text](https://github.com/a7medelnoor/EmaarInterviewTask/master/fragment_details.jpg?raw=true)
+![alt text](https://github.com/a7medelnoor/EmaarInterviewTask/blob/dev/fragment_details.jpg)
