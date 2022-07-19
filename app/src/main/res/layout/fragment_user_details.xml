@@ -250,5 +250,31 @@
         app:layout_constraintStart_toStartOf="@+id/location_text_view_details"
         app:layout_constraintTop_toBottomOf="@+id/location_text_view_details" />
 
+    <ImageView
+        android:id="@+id/age_container_imageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_layer_age"
+        app:layout_constraintBottom_toBottomOf="@+id/user_details_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/user_details_imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/user_details_imageView"
+        app:layout_constraintTop_toTopOf="@+id/user_details_imageView"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <TextView
+        android:id="@+id/user_age_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/age_container_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/age_container_imageView"
+        app:layout_constraintStart_toStartOf="@+id/age_container_imageView"
+        app:layout_constraintTop_toTopOf="@+id/age_container_imageView"
+        app:layout_constraintVertical_bias="0.32999998" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

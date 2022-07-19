@@ -61,6 +61,7 @@ class UserDetailsFragment : Fragment(R.layout.fragment_user_details) {
                 crossfade(true)
                 crossfade(1000)
             }
+            userAgeTextView.text = userData.dob.age.toString()
             emailTextViewDetail.text = userData.email
 
 
