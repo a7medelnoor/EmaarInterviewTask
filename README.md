@@ -5,7 +5,7 @@ This repository for Android developer positon assessment for Emaar (IT Pepole Gu
 # EmaarInterviewTask
 This repository for Android developer positon assessment for Emaar (IT Pepole Gulf) Created by Ahmed Elnoor
 
-Technologie used: 
+Stack used: 
 - Kotlin
 - MVVM
 - Room
@@ -15,7 +15,9 @@ Technologie used:
 - Coroutines
 - Navigation component 
 
-- Fragment Home
+
+
+Fragment Home
 
 ![alt text](https://github.com/a7medelnoor/EmaarInterviewTask/blob/dev/fragment_home.jpg)
 
