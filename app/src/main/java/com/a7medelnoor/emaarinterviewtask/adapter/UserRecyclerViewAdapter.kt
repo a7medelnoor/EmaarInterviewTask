@@ -1,16 +1,19 @@
 package com.a7medelnoor.emaarinterviewtask.adapter
 
 import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.a7medelnoor.emaarinterviewtask.data.models.Result
+import com.a7medelnoor.emaarinterviewtask.data.models.UserResponse
 import com.a7medelnoor.emaarinterviewtask.databinding.UserLayoutAdapterBinding
+import com.a7medelnoor.emaarinterviewtask.ui.fragments.home.HomeFragmentDirections
+import com.a7medelnoor.emaarinterviewtask.util.UserDiffUtill
 import java.time.LocalDate
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
@@ -65,13 +68,13 @@ class UserRecyclerViewAdapter : RecyclerView.Adapter<UserRecyclerViewAdapter.Use
             userFirstName.text = currentUser.name.first
             userLastName.text = currentUser.name.last
             userEmail.text = currentUser.email
-            countryTextView.text = currentUser.location.country
+            userCountry.text = currentUser.location.country
             val date = currentUser.registered.date
             val offsetTime: OffsetDateTime = OffsetDateTime.parse(date)
             // extract date
             val dateExtracted: LocalDate = offsetTime.toLocalDate()
             // format the date
-            val dateFormatted = dateExtracted.format(DateTimeFormatter.ofPattern("MMMM-dd-yyyy"))
+            val dateFormatted = dateExtracted.format(DateTimeFormatter.ofPattern("MMMM dd, yyyy"))
             userRegistrationDate.text = dateFormatted
 
             userThumbnialImageView.load(currentUser.picture.large) {
@@ -79,11 +82,19 @@ class UserRecyclerViewAdapter : RecyclerView.Adapter<UserRecyclerViewAdapter.Use
                 crossfade(1000)
             }
         }
-        viewHolder.itemView.setOnClickListener {
-            Log.d(TAG, "Clicked")
+        viewHolder.itemView.setOnClickListener { mView ->
+           val direction = HomeFragmentDirections
+               .actionHomeFragmentToUserDetailsFragment(currentUser)
+            mView.findNavController().navigate(direction)
+
         }
     }
 
     override fun getItemCount() = userData.size
-
+    fun setData(newData: UserResponse) {
+        val recipesDiffUtil = UserDiffUtill(userData, newData.results)
+        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
+        userData = newData.results
+        diffUtilResult.dispatchUpdatesTo(this)
+    }
 }
