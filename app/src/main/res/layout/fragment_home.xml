@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#BCB9B9"
+            android:background="@color/toolbar_bg_color"
             app:layout_scrollFlags="scroll|enterAlways">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,11 +24,12 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="User List"
+                    android:text="@string/toolbar_title_home_fragment"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:textStyle="bold"

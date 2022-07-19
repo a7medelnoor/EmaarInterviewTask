@@ -1,5 +1,6 @@
 package com.a7medelnoor.emaarinterviewtask.respository
 
+import com.a7medelnoor.emaarinterviewtask.data.local.LocalDataSource
 import com.a7medelnoor.emaarinterviewtask.data.remote.api.ApiService
 import javax.inject.Inject
 /**
@@ -13,9 +14,11 @@ import javax.inject.Inject
  **/
 class UserRepository
 @Inject constructor(
-    private val apiService: ApiService
+    private val apiService: ApiService,
+    local: LocalDataSource
 ) {
 
     suspend fun getUserData() = apiService.getUserData()
+    val local = local
 
 }

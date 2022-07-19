@@ -12,6 +12,10 @@
         <action
             android:id="@+id/action_homeFragment_to_userDetailsFragment"
             app:destination="@id/userDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userDetailsFragment2"
+            app:destination="@id/userDetailsFragment">
+        </action>
     </fragment>
     <fragment
         android:id="@+id/userDetailsFragment"
@@ -20,6 +24,10 @@
         tools:layout="@layout/fragment_user_details" >
         <action
             android:id="@+id/action_userDetailsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment">
+        </action>
+        <argument
+            android:name="result"
+            app:argType="com.a7medelnoor.emaarinterviewtask.data.models.Result" />
     </fragment>
 </navigation>
